@@ -2,7 +2,7 @@
 <html>
 <body>
 <h2>Create Project</h2>
-<input id="name" placeholder="Project name">
+<input id="pname" placeholder="Project name">
 <button onclick="create()">Create</button>
 
 <script>
@@ -10,10 +10,13 @@ function create(){
  fetch("http://localhost:3002/project",{
   method:"POST",
   headers:{"Content-Type":"application/json"},
-  body:JSON.stringify({name:document.getElementById("name").value})
+  body:JSON.stringify({name:document.getElementById("pname").value})
  });
- alert("Project Created");
+ alert("Project created");
 }
 </script>
 </body>
 </html>
+
+
+
